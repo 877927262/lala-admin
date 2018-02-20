@@ -75,7 +75,7 @@
 	export default {
 		data() {
 			return {
-				sysName:'VUEADMIN',
+				sysName:'医院挂号平台',
 				collapsed:false,
 				sysUserName: '',
 				sysUserAvatar: '',

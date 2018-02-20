@@ -27,7 +27,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航一',
+        name: '患者',
         iconCls: 'fa el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
@@ -39,7 +39,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航二',
+        name: '大夫',
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/page4', component: Page4, name: '页面4' },
@@ -49,7 +49,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航三',
+        name: '病症',
         iconCls: 'fa fa-address-card',
         // leaf: true,//只有一个节点
         children: [
@@ -59,7 +59,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: 'Charts',
+        name: '诊断记录',
         iconCls: 'fa fa-bar-chart',
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' }
