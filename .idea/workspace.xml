@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="640dbe2a-f30a-4641-84f6-a303e985808a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/views/user/user.vue" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" afterPath="$PROJECT_DIR$/src/views/Login.vue" />
-      <change beforePath="$PROJECT_DIR$/src/views/charts/echarts.vue" afterPath="$PROJECT_DIR$/src/views/appointment/echarts.vue" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav1/Form.vue" afterPath="$PROJECT_DIR$/src/views/user/Form.vue" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav1/Table.vue" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav1/user.vue" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav2/Page4.vue" afterPath="$PROJECT_DIR$/src/views/doctor/Page4.vue" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav2/Page5.vue" afterPath="$PROJECT_DIR$/src/views/doctor/Page5.vue" />
-      <change beforePath="$PROJECT_DIR$/src/views/nav3/Page6.vue" afterPath="$PROJECT_DIR$/src/views/illness/Page6.vue" />
-    </list>
+    <list default="true" id="640dbe2a-f30a-4641-84f6-a303e985808a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -128,12 +117,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519184898733</updated>
-      <workItem from="1519184901607" duration="281000" />
+      <workItem from="1519184901607" duration="311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281000" />
+    <option name="totallyTimeSpent" value="311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
