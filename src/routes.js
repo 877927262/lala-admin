@@ -1,14 +1,10 @@
 import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
-import Main from './views/Main.vue'
-import Table from './views/nav1/Table.vue'
-import Form from './views/nav1/Form.vue'
-import user from './views/nav1/user.vue'
-import Page4 from './views/nav2/Page4.vue'
-import Page5 from './views/nav2/Page5.vue'
-import Page6 from './views/nav3/Page6.vue'
-import echarts from './views/charts/echarts.vue'
+import User from './views/user/user.vue'
+import Doctor from './views/doctor/doctor.vue'
+import Illness from './views/illness/illness.vue'
+import Appointment from './views/appointment/appointment.vue'
 
 let routes = [
     {
@@ -30,10 +26,10 @@ let routes = [
         name: '患者',
         iconCls: 'fa el-icon-message',//图标样式class
         children: [
-            { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/table', component: Table, name: '患者列表' },
-            { path: '/form', component: Form, name: 'Form' },
-            { path: '/user', component: user, name: '列表' },
+            // { path: '/main', component: Main, name: '主页', hidden: true },
+            { path: '/user', component: User, name: '患者信息' },
+            // { path: '/form', component: Form, name: 'Form' },
+            // { path: '/user', component: user, name: '列表' },
         ]
     },
     {
@@ -42,8 +38,8 @@ let routes = [
         name: '大夫',
         iconCls: 'fa fa-id-card-o',
         children: [
-            { path: '/page4', component: Page4, name: '页面4' },
-            { path: '/page5', component: Page5, name: '页面5' }
+            { path: '/doctor', component: Doctor, name: '大夫信息' },
+            // { path: '/page5', component: Page5, name: '页面5' }
         ]
     },
     {
@@ -53,16 +49,16 @@ let routes = [
         iconCls: 'fa fa-address-card',
         // leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '导航三' }
+            { path: '/illness', component: Illness, name: '病症信息' }
         ]
     },
     {
         path: '/',
         component: Home,
-        name: '挂号记录',
+        name: '挂号',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/echarts', component: echarts, name: 'echarts' }
+            { path: '/appointment', component: Appointment, name: '挂号记录' }
         ]
     },
     {
