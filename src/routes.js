@@ -31,7 +31,7 @@ let routes = [
         iconCls: 'fa el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
-            { path: '/table', component: Table, name: 'Table' },
+            { path: '/table', component: Table, name: '患者列表' },
             { path: '/form', component: Form, name: 'Form' },
             { path: '/user', component: user, name: '列表' },
         ]
@@ -59,7 +59,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '诊断记录',
+        name: '挂号记录',
         iconCls: 'fa fa-bar-chart',
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' }
