@@ -21,13 +21,13 @@
 			</el-table-column>
 			<el-table-column type="index" width="60">
 			</el-table-column>
-			<el-table-column prop="name" label="姓名" width="120" sortable>
+			<el-table-column prop="name" label="名称" width="120" sortable>
 			</el-table-column>
-			<el-table-column prop="gender" label="性别" width="100" :formatter="formatSex" sortable>
+			<el-table-column prop="banner" label="图片" width="100"  sortable>
 			</el-table-column>
-			<el-table-column prop="age" label="年龄" width="100" sortable>
+			<el-table-column prop="discribe" label="描述" width="100" sortable>
 			</el-table-column>
-			<el-table-column prop="card_id" label="身份证号" width="150" sortable>
+			<el-table-column prop="method" label="治疗方法" width="150" sortable>
 			</el-table-column>
 			<el-table-column min-width="180" >
 			</el-table-column>

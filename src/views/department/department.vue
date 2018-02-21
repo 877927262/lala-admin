@@ -21,14 +21,14 @@
 			</el-table-column>
 			<el-table-column type="index" width="60">
 			</el-table-column>
-			<el-table-column prop="name" label="姓名" width="120" sortable>
+			<el-table-column prop="name" label="名称" width="120" sortable>
 			</el-table-column>
-			<el-table-column prop="gender" label="性别" width="100" :formatter="formatSex" sortable>
+			<el-table-column prop="banner" label="图片" width="100" sortable>
 			</el-table-column>
-			<el-table-column prop="age" label="年龄" width="100" sortable>
+			<!-- <el-table-column prop="age" label="年龄" width="100" sortable>
 			</el-table-column>
 			<el-table-column prop="department" label="科室" width="150" sortable>
-			</el-table-column>
+			</el-table-column> -->
 			<el-table-column min-width="180" >
 			</el-table-column>
 			<el-table-column label="操作" width="150">

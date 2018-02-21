@@ -5,6 +5,7 @@ import User from './views/user/user.vue'
 import Doctor from './views/doctor/doctor.vue'
 import Illness from './views/illness/illness.vue'
 import Appointment from './views/appointment/appointment.vue'
+import Department from './views/department/department.vue'
 
 let routes = [
     {
@@ -39,7 +40,15 @@ let routes = [
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/doctor', component: Doctor, name: '大夫信息' },
-            // { path: '/page5', component: Page5, name: '页面5' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '科室',
+        iconCls: 'fa fa-id-card-o',
+        children: [
+            { path: '/department', component: Department, name: '科室信息' },
         ]
     },
     {
