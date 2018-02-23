@@ -106,6 +106,8 @@
 
 <script>
 	import util from '../../common/js/util'
+	import axios from 'axios';
+
 	//import NProgress from 'nprogress'
 	import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../api/api';
 
@@ -113,7 +115,7 @@
 		data() {
 			return {
 				filters: {
-					name: ''
+					name: '张'
 				},
 				users: [],
 				total: 0,
@@ -167,18 +169,34 @@
 			},
 			//获取用户列表
 			getUsers() {
-				let para = {
-					page: this.page,
-					name: this.filters.name
-				};
-				this.listLoading = true;
+				// let para = {
+				 // page: this.page,
+				 // name: this.filters.name
+				// };
+				let page = this.page;
+				let name = this.filters.name
+				// this.listLoading = true;
 				//NProgress.start();
-				getUserListPage(para).then((res) => {
-					this.total = res.data.total;
-					this.users = res.data.users;
-					this.listLoading = false;
-					//NProgress.done();
+				// getUserListPage(name, page).then((res) => {
+				// 	// this.total = res.data.total;
+				// 	// this.users = res.data.users;
+				// 	this.listLoading = false;
+				// 	//NProgress.done();
+				// });
+				var url = 'http://127.0.0.1:3000/appointment/getuser'
+				console.log(url)
+				axios.get(url,{
+					params:{
+						name:'张',
+						page:1
+					}
+				}).then((res)=>{
+					console.log(res)
+				}).catch((err)=>{
+					console.log('错啦')
 				});
+
+
 			},
 			//删除
 			handleDel: function (index, row) {
