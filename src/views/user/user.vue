@@ -81,9 +81,9 @@
 					<el-input v-model="addForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 				<el-form-item label="性别">
-					<el-radio-group v-model="addForm.sex" prop="gender">
-						<el-radio class="radio" :label="1">男</el-radio>
-						<el-radio class="radio" :label="0">女</el-radio>
+					<el-radio-group v-model="addForm.gender" prop="gender">
+						<el-radio class="radio" label="男">男</el-radio>
+						<el-radio class="radio" label="女">女</el-radio>
 					</el-radio-group>
 				</el-form-item>
 				<el-form-item label="年龄" prop="age">
@@ -163,10 +163,6 @@
 			}
 		},
 		methods: {
-			//性别显示转换
-			formatSex: function (row, column) {
-				return row.sex == 1 ? '男' : row.sex == 0 ? '女' : '未知';
-			},
 			handleCurrentChange(val) {
 				this.page = val;
 				this.getUsers();
@@ -215,10 +211,9 @@
 				this.addFormVisible = true;
 				this.addForm = {
 					name: '',
-					sex: '男',
+					gender: '男',
 					age: 0,
-					birth: '',
-					addr: ''
+					card_id: ''
 				};
 			},
 			//编辑
@@ -253,7 +248,6 @@
 							this.addLoading = true;
 							//NProgress.start();
 							let para = Object.assign({}, this.addForm);
-							para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
 							addUser(para).then((res) => {
 								this.addLoading = false;
 								//NProgress.done();
