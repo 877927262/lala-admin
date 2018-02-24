@@ -53,20 +53,20 @@
 					<el-input v-model="editForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 				<el-form-item label="性别">
-					<el-radio-group v-model="editForm.sex">
-						<el-radio class="radio" :label="1">男</el-radio>
-						<el-radio class="radio" :label="0">女</el-radio>
+					<el-radio-group v-model="editForm.gender">
+						<el-radio class="radio" label="男">男</el-radio>
+						<el-radio class="radio" label="女">女</el-radio>
 					</el-radio-group>
 				</el-form-item>
 				<el-form-item label="年龄">
 					<el-input-number v-model="editForm.age" :min="0" :max="200"></el-input-number>
 				</el-form-item>
-				<el-form-item label="生日">
-					<el-date-picker type="date" placeholder="选择日期" v-model="editForm.birth"></el-date-picker>
+				<el-form-item label="身份证号" prop="card_id">
+					<el-input type="number" placeholder="输入身份证号" v-model="editForm.card_id"></el-input>
 				</el-form-item>
-				<el-form-item label="地址">
+				<!-- <el-form-item label="地址">
 					<el-input type="textarea" v-model="editForm.addr"></el-input>
-				</el-form-item>
+				</el-form-item> -->
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button @click.native="editFormVisible = false">取消</el-button>
@@ -81,20 +81,20 @@
 					<el-input v-model="addForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 				<el-form-item label="性别">
-					<el-radio-group v-model="addForm.sex">
+					<el-radio-group v-model="addForm.sex" prop="gender">
 						<el-radio class="radio" :label="1">男</el-radio>
 						<el-radio class="radio" :label="0">女</el-radio>
 					</el-radio-group>
 				</el-form-item>
-				<el-form-item label="年龄">
+				<el-form-item label="年龄" prop="age">
 					<el-input-number v-model="addForm.age" :min="0" :max="200"></el-input-number>
 				</el-form-item>
-				<el-form-item label="生日">
-					<el-date-picker type="date" placeholder="选择日期" v-model="addForm.birth"></el-date-picker>
+				<el-form-item label="身份证号" prop="card_id">
+					<el-input type="number" placeholder="输入身份证号" v-model="addForm.card_id"></el-input>
 				</el-form-item>
-				<el-form-item label="地址">
+				<!-- <el-form-item label="地址">
 					<el-input type="textarea" v-model="addForm.addr"></el-input>
-				</el-form-item>
+				</el-form-item> -->
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button @click.native="addFormVisible = false">取消</el-button>
@@ -128,16 +128,18 @@
 				editFormRules: {
 					name: [
 						{ required: true, message: '请输入姓名', trigger: 'blur' }
+					],
+					card_id: [
+						{ required: true, message: '请输入身份证号', trigger: 'blur' }
 					]
 				},
 				//编辑界面数据
 				editForm: {
 					id: 0,
 					name: '',
-					sex: -1,
+					gender: '',
 					age: 0,
-					birth: '',
-					addr: ''
+					card_id: ''
 				},
 
 				addFormVisible: false,//新增界面是否显示
@@ -145,15 +147,17 @@
 				addFormRules: {
 					name: [
 						{ required: true, message: '请输入姓名', trigger: 'blur' }
+					],
+					card_id: [
+						{ required: true, message: '请输入身份证号', trigger: 'blur' }
 					]
 				},
 				//新增界面数据
 				addForm: {
 					name: '',
-					sex: -1,
+					gender: '',
 					age: 0,
-					birth: '',
-					addr: ''
+					card_id: ''
 				}
 
 			}
@@ -169,10 +173,6 @@
 			},
 			//获取用户列表
 			getUsers() {
-				// let para = {
-				 // page: this.page,
-				 // name: this.filters.name
-				// };
 				let page = this.page;
 				let name = this.filters.name
 				this.listLoading = true;
@@ -183,20 +183,6 @@
 					this.listLoading = false;
 					//NProgress.done();
 				});
-				// var url = 'http://127.0.0.1:3000/appointment/getuser'
-				// console.log(url)
-				// axios.get(url,{
-				// 	params:{
-				// 		name:'张',
-				// 		page:1
-				// 	}
-				// }).then((res)=>{
-				// 	console.log(res)
-				// }).catch((err)=>{
-				// 	console.log('错啦')
-				// });
-
-
 			},
 			//删除
 			handleDel: function (index, row) {
@@ -229,7 +215,7 @@
 				this.addFormVisible = true;
 				this.addForm = {
 					name: '',
-					sex: -1,
+					sex: '男',
 					age: 0,
 					birth: '',
 					addr: ''
