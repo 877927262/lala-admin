@@ -17,8 +17,8 @@
 
 		<!--列表-->
 		<el-table :data="users" highlight-current-row v-loading="listLoading" @selection-change="selsChange" style="width: 100%;">
-			<el-table-column type="selection" width="55">
-			</el-table-column>
+			<!-- <el-table-column type="selection" width="55">
+			</el-table-column> -->
 			<el-table-column type="index" width="60">
 			</el-table-column>
 			<el-table-column prop="name" label="姓名" width="120" sortable>
@@ -41,7 +41,7 @@
 
 		<!--工具条-->
 		<el-col :span="24" class="toolbar">
-			<el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0">批量删除</el-button>
+			<!-- <el-button type="danger" @click="batchRemove" :disabled="this.sels.length===0">批量删除</el-button> -->
 			<el-pagination layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="10" :total="total" style="float:right;">
 			</el-pagination>
 		</el-col>

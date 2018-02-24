@@ -12,7 +12,7 @@ export const getUserListPage = (name, page) => {
 
 export const removeUser = params => { return axios.get(`${base}/user/remove`, { params: params }); };
 
-export const batchRemoveUser = params => { return axios.get(`${base}/user/batchremove`, { params: params }); };
+// export const batchRemoveUser = params => { return axios.get(`${base}/user/batchremove`, { params: params }); };
 
 export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
 
