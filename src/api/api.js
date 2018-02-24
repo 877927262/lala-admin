@@ -7,9 +7,7 @@ export const requestLogin = params => { return axios.post(`/login`, params).then
 // export const getUserList = () => { return axios.get('localhost:3000/appointment/getUser', { name: '', page: 1 }); };
 
 export const getUserListPage = (name, page) => {
-  console.log(name, page)
-
-  return axios.get('localhost:3000/appointment/getUser', { name: name, page: page });
+  return axios.get('http://127.0.0.1:3000/appointment/getuser', { params:{name: name, page: page }});
  };
 
 export const removeUser = params => { return axios.get(`${base}/user/remove`, { params: params }); };

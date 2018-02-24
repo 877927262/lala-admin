@@ -23,7 +23,7 @@
 			</el-table-column>
 			<el-table-column prop="name" label="姓名" width="120" sortable>
 			</el-table-column>
-			<el-table-column prop="gender" label="性别" width="100" :formatter="formatSex" sortable>
+			<el-table-column prop="gender" label="性别" width="100"  sortable>
 			</el-table-column>
 			<el-table-column prop="age" label="年龄" width="100" sortable>
 			</el-table-column>
@@ -115,7 +115,7 @@
 		data() {
 			return {
 				filters: {
-					name: '张'
+					name: ''
 				},
 				users: [],
 				total: 0,
@@ -175,26 +175,26 @@
 				// };
 				let page = this.page;
 				let name = this.filters.name
-				// this.listLoading = true;
+				this.listLoading = true;
 				//NProgress.start();
-				// getUserListPage(name, page).then((res) => {
-				// 	// this.total = res.data.total;
-				// 	// this.users = res.data.users;
-				// 	this.listLoading = false;
-				// 	//NProgress.done();
-				// });
-				var url = 'http://127.0.0.1:3000/appointment/getuser'
-				console.log(url)
-				axios.get(url,{
-					params:{
-						name:'张',
-						page:1
-					}
-				}).then((res)=>{
-					console.log(res)
-				}).catch((err)=>{
-					console.log('错啦')
+				getUserListPage(name, page).then((res) => {
+					this.total = res.data.total;
+					this.users = res.data.data;
+					this.listLoading = false;
+					//NProgress.done();
 				});
+				// var url = 'http://127.0.0.1:3000/appointment/getuser'
+				// console.log(url)
+				// axios.get(url,{
+				// 	params:{
+				// 		name:'张',
+				// 		page:1
+				// 	}
+				// }).then((res)=>{
+				// 	console.log(res)
+				// }).catch((err)=>{
+				// 	console.log('错啦')
+				// });
 
 
 			},
