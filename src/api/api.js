@@ -10,7 +10,7 @@ export const getUserListPage = (name, page) => {
 
 export const removeUser = params => { return axios.get(`${base}/user/remove`, { params: params }); };
 
-export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
+export const editUser = params => { return axios.post(`${base}/editUser`, params)};
 
 export const addUser = params => {
   return axios.post(`${base}/addUser`, {

@@ -62,7 +62,7 @@
 					<el-input-number v-model="editForm.age" :min="0" :max="200"></el-input-number>
 				</el-form-item>
 				<el-form-item label="身份证号" prop="card_id">
-					<el-input type="number" placeholder="输入身份证号" v-model="editForm.card_id"></el-input>
+					<el-input  placeholder="输入身份证号" v-model="editForm.card_id"></el-input>
 				</el-form-item>
 				<!-- <el-form-item label="地址">
 					<el-input type="textarea" v-model="editForm.addr"></el-input>
@@ -90,7 +90,7 @@
 					<el-input-number v-model="addForm.age" :min="0" :max="200"></el-input-number>
 				</el-form-item>
 				<el-form-item label="身份证号" prop="card_id">
-					<el-input type="number" placeholder="输入身份证号" v-model="addForm.card_id"></el-input>
+					<el-input  placeholder="输入身份证号" v-model="addForm.card_id"></el-input>
 				</el-form-item>
 				<!-- <el-form-item label="地址">
 					<el-input type="textarea" v-model="addForm.addr"></el-input>
@@ -224,10 +224,9 @@
 							this.editLoading = true;
 							//NProgress.start();
 							let para = Object.assign({}, this.editForm);
-							para.birth = (!para.birth || para.birth == '') ? '' : util.formatDate.format(new Date(para.birth), 'yyyy-MM-dd');
+							// console.log(para);
 							editUser(para).then((res) => {
 								this.editLoading = false;
-								//NProgress.done();
 								this.$message({
 									message: '提交成功',
 									type: 'success'
