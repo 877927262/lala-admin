@@ -109,7 +109,7 @@
 	import axios from 'axios';
 
 	//import NProgress from 'nprogress'
-	import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../api/api';
+	import { getUserListPage, deleteUser, batchRemoveUser, editUser, addUser } from '../../api/api';
 
 	export default {
 		data() {
@@ -187,8 +187,8 @@
 				}).then(() => {
 					this.listLoading = true;
 					//NProgress.start();
-					let para = { id: row.id };
-					removeUser(para).then((res) => {
+					let params = {id: row.id};
+					deleteUser(params).then((res) => {
 						this.listLoading = false;
 						//NProgress.done();
 						this.$message({
