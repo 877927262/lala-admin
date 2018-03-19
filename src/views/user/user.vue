@@ -108,8 +108,8 @@
 	import util from '../../common/js/util'
 	import axios from 'axios';
 
-	//import NProgress from 'nprogress'
-	import { getUserListPage, deleteUser, batchRemoveUser, editUser, addUser } from '../../api/api';
+	// import NProgress from 'nprogress'
+	import { getUserListPage, deleteUser, editUser, addUser } from '../../api/api';
 
 	export default {
 		data() {
@@ -172,12 +172,12 @@
 				let page = this.page;
 				let name = this.filters.name
 				this.listLoading = true;
-				//NProgress.start();
+				// NProgress.start();
 				getUserListPage(name, page).then((res) => {
 					this.total = res.data.total;
 					this.users = res.data.data;
 					this.listLoading = false;
-					//NProgress.done();
+					// NProgress.done();
 				});
 			},
 			//删除
