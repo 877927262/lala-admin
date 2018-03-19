@@ -26,3 +26,8 @@ export const addUser = params => {
     gender: params.gender
   })
 };
+
+// 查询大夫
+export const getDoctorListPage = (name, page) => {
+    return axios.get(`${base}/getDoctor`, { params:{name: name, page: page }});
+};

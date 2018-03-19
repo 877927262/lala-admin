@@ -7,7 +7,7 @@
                     <el-input v-model="filters.name" placeholder="姓名"></el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" v-on:click="getUsers">查询</el-button>
+                    <el-button type="primary" v-on:click="getDoctors">查询</el-button>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="handleAdd">新增</el-button>
@@ -125,7 +125,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import {getUserListPage, deleteUser, editUser, addUser} from '../../api/api';
+    import {getDoctorListPage, deleteUser, editUser, addUser} from '../../api/api';
 
     export default {
         data() {
@@ -203,15 +203,15 @@
         methods: {
             handleCurrentChange(val) {
                 this.page = val;
-                this.getUsers();
+                this.getDoctors();
             },
             //获取用户列表
-            getUsers() {
+            getDoctors() {
                 let page = this.page;
-                let name = this.filters.name
+                let name = this.filters.name;
                 this.listLoading = true;
                 // NProgress.start();
-                getUserListPage(name, page).then((res) => {
+                getDoctorListPage(name, page).then((res) => {
                     this.total = res.data.total;
                     this.users = res.data.data;
                     this.listLoading = false;
@@ -233,7 +233,7 @@
                             message: '删除成功',
                             type: 'success'
                         });
-                        this.getUsers();
+                        this.getDoctors();
                     });
                 }).catch(() => {
 
@@ -270,7 +270,7 @@
                                 });
                                 this.$refs['editForm'].resetFields();
                                 this.editFormVisible = false;
-                                this.getUsers();
+                                this.getDoctors();
                             });
                         });
                     }
@@ -293,7 +293,7 @@
                                 });
                                 this.$refs['addForm'].resetFields();
                                 this.addFormVisible = false;
-                                this.getUsers();
+                                this.getDoctors();
                             });
                         });
                     }
@@ -304,7 +304,7 @@
             }
         },
         mounted() {
-            this.getUsers();
+            this.getDoctors();
         }
     }
 
