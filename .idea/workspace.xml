@@ -4,6 +4,7 @@
     <list default="true" id="640dbe2a-f30a-4641-84f6-a303e985808a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/views/doctor/doctor.vue" afterPath="$PROJECT_DIR$/src/views/doctor/doctor.vue" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/user.vue" afterPath="$PROJECT_DIR$/src/views/user/user.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="user.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+            <state relative-caret-position="455">
+              <caret line="266" column="13" lean-forward="true" selection-start-line="266" selection-start-column="13" selection-end-line="266" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="doctor.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1076">
-              <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="2236">
+              <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
               <folding>
                 <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
@@ -71,10 +72,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/user/user.vue" />
         <option value="$PROJECT_DIR$/src/views/Home.vue" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/views/doctor/doctor.vue" />
+        <option value="$PROJECT_DIR$/src/views/user/user.vue" />
       </list>
     </option>
   </component>
@@ -111,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -118,11 +120,6 @@
             <path>
               <item name="lala管理系统" type="b2602c69:ProjectViewProjectNode" />
               <item name="lala管理系统" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lala管理系统" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lala管理系统" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lala管理系统" type="b2602c69:ProjectViewProjectNode" />
@@ -152,7 +149,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,12 +188,13 @@
       <workItem from="1521351361621" duration="135000" />
       <workItem from="1521372344224" duration="292000" />
       <workItem from="1521425338496" duration="5636000" />
-      <workItem from="1521434039469" duration="1280000" />
+      <workItem from="1521434039469" duration="1333000" />
+      <workItem from="1521446825503" duration="408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8808000" />
+    <option name="totallyTimeSpent" value="9269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -234,6 +231,37 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#5997#6036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -366,14 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -382,10 +402,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="266" column="13" lean-forward="true" selection-start-line="266" selection-start-column="13" selection-end-line="266" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1076">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="2236">
+          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
           <folding>
             <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />

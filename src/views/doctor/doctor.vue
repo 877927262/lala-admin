@@ -301,28 +301,6 @@
             },
             selsChange: function (sels) {
                 this.sels = sels;
-            },
-            //批量删除
-            batchRemove: function () {
-                var ids = this.sels.map(item => item.id).toString();
-                this.$confirm('确认删除选中记录吗？', '提示', {
-                    type: 'warning'
-                }).then(() => {
-                    this.listLoading = true;
-                    //NProgress.start();
-                    let para = {ids: ids};
-                    batchRemoveUser(para).then((res) => {
-                        this.listLoading = false;
-                        //NProgress.done();
-                        this.$message({
-                            message: '删除成功',
-                            type: 'success'
-                        });
-                        this.getUsers();
-                    });
-                }).catch(() => {
-
-                });
             }
         },
         mounted() {
