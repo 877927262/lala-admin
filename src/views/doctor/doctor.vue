@@ -125,7 +125,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import {getDoctorListPage, deleteUser, editUser, addUser, getAllDepartment} from '../../api/api';
+    import {getDoctorListPage, deleteDoctor, editUser, addUser, getAllDepartment} from '../../api/api';
 
     export default {
         data() {
@@ -218,7 +218,7 @@
                     this.listLoading = true;
                     //NProgress.start();
                     let params = {id: row.id};
-                    deleteUser(params).then((res) => {
+                    deleteDoctor(params).then((res) => {
                         this.listLoading = false;
                         //NProgress.done();
                         this.$message({
@@ -298,7 +298,7 @@
             }
         },
         mounted() {
-            let _this = this
+            let _this = this;
             this.getDoctors();
             // 获取所有的科室
             getAllDepartment().then(function (res) {

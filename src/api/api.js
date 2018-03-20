@@ -35,3 +35,7 @@ export const getDoctorListPage = (name, page) => {
 export const getAllDepartment = (name, page) => {
     return axios.get(`${base}/getAllDepartment`);
 };
+// 删除大夫
+export const deleteDoctor = params => {
+    return axios.get(`${base}/deleteDoctor`, { params: params });
+};
