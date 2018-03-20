@@ -125,7 +125,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import {getDoctorListPage, deleteDoctor, editUser, addUser, getAllDepartment} from '../../api/api';
+    import {getDoctorListPage, deleteDoctor, editUser, addDoctor, getAllDepartment} from '../../api/api';
 
     export default {
         data() {
@@ -278,7 +278,7 @@
                             this.addLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
-                            addUser(para).then((res) => {
+                            addDoctor(para).then((res) => {
                                 this.addLoading = false;
                                 //NProgress.done();
                                 this.$message({

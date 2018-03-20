@@ -39,3 +39,12 @@ export const getAllDepartment = (name, page) => {
 export const deleteDoctor = params => {
     return axios.get(`${base}/deleteDoctor`, { params: params });
 };
+// 新增用户
+export const addDoctor = params => {
+    return axios.post(`${base}/addDoctor`, {
+        name: params.name,
+        age: params.age,
+        gender: params.gender,
+        department: params.initDepartmentValue
+    })
+};
