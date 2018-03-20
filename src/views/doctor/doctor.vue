@@ -125,7 +125,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import {getDoctorListPage, deleteDoctor, editUser, addDoctor, getAllDepartment} from '../../api/api';
+    import {getDoctorListPage, deleteDoctor, editDoctor, addDoctor, getAllDepartment} from '../../api/api';
 
     export default {
         data() {
@@ -237,7 +237,8 @@
                 this.editForm.name = row.name;
                 this.editForm.gender = row.gender;
                 this.editForm.age = row.age;
-                this.editForm.initDepartmentValue = row.department;
+                this.editForm.id = row.id;
+                this.editForm.initDepartmentValue = row.id;
             },
             //显示新增界面，并且将数据清空
             handleAdd: function () {
@@ -255,8 +256,7 @@
                             this.editLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
-                            // console.log(para);
-                            editUser(para).then((res) => {
+                            editDoctor(para).then((res) => {
                                 this.editLoading = false;
                                 this.$message({
                                     message: '提交成功',

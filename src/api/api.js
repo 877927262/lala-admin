@@ -39,7 +39,7 @@ export const getAllDepartment = (name, page) => {
 export const deleteDoctor = params => {
     return axios.get(`${base}/deleteDoctor`, { params: params });
 };
-// 新增用户
+// 新增大夫
 export const addDoctor = params => {
     return axios.post(`${base}/addDoctor`, {
         name: params.name,
@@ -47,4 +47,8 @@ export const addDoctor = params => {
         gender: params.gender,
         department: params.initDepartmentValue
     })
+};
+// 编辑大夫
+export const editDoctor = params => {
+    return axios.post(`${base}/editDoctor`, params)
 };
