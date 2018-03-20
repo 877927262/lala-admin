@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640dbe2a-f30a-4641-84f6-a303e985808a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" afterPath="$PROJECT_DIR$/src/api/api.js" />
       <change beforePath="$PROJECT_DIR$/src/views/doctor/doctor.vue" afterPath="$PROJECT_DIR$/src/views/doctor/doctor.vue" />
     </list>
@@ -20,8 +21,8 @@
       <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+            <state relative-caret-position="1190">
+              <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -30,8 +31,8 @@
       <file leaf-file-name="user.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="180" column="19" lean-forward="true" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+            <state relative-caret-position="5780">
+              <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -40,16 +41,24 @@
       <file leaf-file-name="doctor.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="217" column="40" lean-forward="true" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
+            <state relative-caret-position="550">
+              <caret line="239" column="16" lean-forward="true" selection-start-line="239" selection-start-column="16" selection-end-line="239" selection-end-column="16" />
               <folding>
                 <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#5999#6038#0" expanded="true" />
-                <element signature="e#6233#8501#0" expanded="false" />
+                <element signature="e#7684#8238#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,6 +75,7 @@
       <find>getUsers</find>
       <find>getDoctors</find>
       <find>getUserListPage</find>
+      <find>getDoctorListPage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,9 +85,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/views/Home.vue" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/views/user/user.vue" />
         <option value="$PROJECT_DIR$/src/api/api.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/views/doctor/doctor.vue" />
       </list>
     </option>
@@ -115,8 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,6 +167,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,6 +176,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,12 +210,21 @@
       <workItem from="1521372344224" duration="292000" />
       <workItem from="1521425338496" duration="5636000" />
       <workItem from="1521434039469" duration="1333000" />
-      <workItem from="1521446825503" duration="2736000" />
+      <workItem from="1521446825503" duration="2982000" />
+      <workItem from="1521451650223" duration="209000" />
+      <workItem from="1521451885864" duration="98000" />
+      <workItem from="1521451991853" duration="11000" />
+      <workItem from="1521452028941" duration="257000" />
+      <workItem from="1521452313109" duration="611000" />
+      <workItem from="1521453106298" duration="155000" />
+      <workItem from="1521453341911" duration="148000" />
+      <workItem from="1521511753505" duration="3428000" />
+      <workItem from="1521516242174" duration="345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11597000" />
+    <option name="totallyTimeSpent" value="17105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -243,6 +263,267 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5780">
+          <caret line="170" column="24" lean-forward="true" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5406">
+          <caret line="226" column="27" lean-forward="true" selection-start-line="226" selection-start-column="27" selection-end-line="226" selection-end-column="27" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6120">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="70" column="50" lean-forward="false" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6120">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="70" column="50" lean-forward="true" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4140">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="52" column="96" lean-forward="true" selection-start-line="52" selection-start-column="96" selection-end-line="52" selection-end-column="96" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3401">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="180" column="19" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="217" column="40" lean-forward="false" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6120">
+          <caret line="180" column="19" lean-forward="true" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="217" column="40" lean-forward="true" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
+          <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
@@ -263,11 +544,9 @@
           <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
           <folding>
             <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#5999#6038#0" expanded="true" />
-            <element signature="e#6233#8501#0" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -294,11 +573,9 @@
           <caret line="246" column="55" lean-forward="true" selection-start-line="246" selection-start-column="55" selection-end-line="246" selection-end-column="55" />
           <folding>
             <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#5999#6038#0" expanded="true" />
-            <element signature="e#6233#8501#0" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -396,41 +673,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
+    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="5780">
+          <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="31" column="71" lean-forward="true" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        <state relative-caret-position="1190">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/user/user.vue">
+    <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="180" column="19" lean-forward="true" selection-start-line="171" selection-start-column="16" selection-end-line="180" selection-end-column="19" />
+        <state relative-caret-position="306">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/doctor/doctor.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="217" column="40" lean-forward="true" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
+        <state relative-caret-position="550">
+          <caret line="239" column="16" lean-forward="true" selection-start-line="239" selection-start-column="16" selection-end-line="239" selection-end-column="16" />
           <folding>
             <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#el-dialog#0;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#5999#6038#0" expanded="true" />
-            <element signature="e#6233#8501#0" expanded="false" />
+            <element signature="e#7684#8238#0" expanded="false" />
           </folding>
         </state>
       </provider>

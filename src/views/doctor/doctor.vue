@@ -125,7 +125,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import {getDoctorListPage, deleteUser, editUser, addUser} from '../../api/api';
+    import {getDoctorListPage, deleteUser, editUser, addUser, getAllDepartment} from '../../api/api';
 
     export default {
         data() {
@@ -156,15 +156,7 @@
                     gender: '',
                     age: 0,
                     card_id: '',
-                    department: [{
-                        name: '呵呵科',
-                        img: '11',
-                        id: '1'
-                    }, {
-                        name: '哈哈科',
-                        img: '22',
-                        id: '2'
-                    }],
+                    department: '',
                     //下拉菜单的默认值，如果设置为空，就显示请选择
                     initDepartmentValue: ''
                 },
@@ -242,8 +234,10 @@
             //显示编辑界面
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
-                //在这里获取一下科室
-                this.editForm = Object.assign({}, row);
+                this.editForm.name = row.name;
+                this.editForm.gender = row.gender;
+                this.editForm.age = row.age;
+                this.editForm.initDepartmentValue = row.department;
             },
             //显示新增界面，并且将数据清空
             handleAdd: function () {
@@ -304,7 +298,13 @@
             }
         },
         mounted() {
+            let _this = this
             this.getDoctors();
+            // 获取所有的科室
+            getAllDepartment().then(function (res) {
+                _this.addForm.department = res.data;
+                _this.editForm.department = res.data;
+            });
         }
     }
 

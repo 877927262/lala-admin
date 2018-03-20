@@ -31,3 +31,7 @@ export const addUser = params => {
 export const getDoctorListPage = (name, page) => {
     return axios.get(`${base}/getDoctor`, { params:{name: name, page: page }});
 };
+//获取所有的科室
+export const getAllDepartment = (name, page) => {
+    return axios.get(`${base}/getAllDepartment`);
+};
