@@ -51,7 +51,7 @@
 				<el-form-item label="名称" prop="name">
 					<el-input v-model="editForm.name" auto-complete="off"></el-input>
 				</el-form-item>
-				<el-form-item label="图片地址" prop="img_addr">
+				<el-form-item label="图片地址" prop="banner">
 					<el-input placeholder="输入图片地址" v-model="editForm.banner"></el-input>
 				</el-form-item>
 			</el-form>
@@ -67,8 +67,8 @@
 				<el-form-item label="名称" prop="name">
 					<el-input v-model="addForm.name" auto-complete="off"></el-input>
 				</el-form-item>
-				<el-form-item label="图片地址" prop="img_addr">
-					<el-input  placeholder="输入图片地址" v-model="addForm.imgAddress"></el-input>
+				<el-form-item label="图片地址" prop="banner">
+					<el-input  placeholder="输入图片地址" v-model="addForm.banner"></el-input>
 				</el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
@@ -84,7 +84,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import { getDepartmentListPage, deleteDepartment, editUser, addUser } from '../../api/api';
+    import { getDepartmentListPage, deleteDepartment, editDepartment, addDepartment } from '../../api/api';
 
     export default {
         data() {
@@ -104,7 +104,7 @@
                     name: [
                         { required: true, message: '请输入名称', trigger: 'blur' }
                     ],
-                    img_addr: [
+                    banner: [
                         { required: true, message: '请输入图片地址', trigger: 'blur' }
                     ]
                 },
@@ -120,14 +120,14 @@
                     name: [
                         { required: true, message: '请输入名称', trigger: 'blur' }
                     ],
-                    img_addr: [
+                    banner: [
                         { required: true, message: '请输入图片地址', trigger: 'blur' }
                     ]
                 },
                 //新增界面数据
                 addForm: {
                     name: '',
-                    imgAddress: ''
+                    banner: ''
                 }
 
             }
@@ -174,18 +174,14 @@
             //显示编辑界面
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
-                console.log(row);
                 this.editForm = Object.assign({}, row);
-                console.log(this.editForm);
             },
             //显示新增界面
             handleAdd: function () {
                 this.addFormVisible = true;
                 this.addForm = {
                     name: '',
-                    gender: '男',
-                    age: 0,
-                    card_id: ''
+                    banner: ''
                 };
             },
             //编辑
@@ -197,7 +193,7 @@
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
                             // console.log(para);
-                            editUser(para).then((res) => {
+                            editDepartment(para).then((res) => {
                                 this.editLoading = false;
                                 this.$message({
                                     message: '提交成功',
@@ -219,7 +215,7 @@
                             this.addLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.addForm);
-                            addUser(para).then((res) => {
+                            addDepartment(para).then((res) => {
                                 this.addLoading = false;
                                 //NProgress.done();
                                 this.$message({

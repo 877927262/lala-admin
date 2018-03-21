@@ -61,3 +61,14 @@ export const getDepartmentListPage = (name, page) => {
 export const deleteDepartment = params => {
     return axios.get(`${base}/deleteDepartment`, { params: params });
 };
+// 新增科室
+export const addDepartment = params => {
+    return axios.post(`${base}/addDepartment`, {
+        name: params.name,
+        banner: params.banner
+    })
+};
+// 编辑科室
+export const editDepartment = params => {
+    return axios.post(`${base}/editDepartment`, params)
+};
