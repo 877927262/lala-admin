@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="640dbe2a-f30a-4641-84f6-a303e985808a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" afterPath="$PROJECT_DIR$/src/api/api.js" />
       <change beforePath="$PROJECT_DIR$/src/views/department/department.vue" afterPath="$PROJECT_DIR$/src/views/department/department.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,11 +39,15 @@
       <file leaf-file-name="department.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/department/department.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="140" column="12" lean-forward="false" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
+            <state relative-caret-position="739">
+              <caret line="113" column="30" lean-forward="true" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
               <folding>
+                <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#img#0;n#template#0;n#el-table-column#2;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -196,12 +199,12 @@
       <workItem from="1521544470407" duration="110000" />
       <workItem from="1521544603801" duration="232000" />
       <workItem from="1521544973501" duration="367000" />
-      <workItem from="1521590993856" duration="1845000" />
+      <workItem from="1521590993856" duration="2217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28282000" />
+    <option name="totallyTimeSpent" value="28654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -234,7 +237,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -603,11 +608,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/department/department.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="140" column="12" lean-forward="false" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
+        <state relative-caret-position="739">
+          <caret line="113" column="30" lean-forward="true" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
           <folding>
+            <element signature="n#el-col#0;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#img#0;n#template#0;n#el-table-column#2;n#el-table#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#el-col#1;n#section#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#el-dialog#1;n#section#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

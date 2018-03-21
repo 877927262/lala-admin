@@ -52,7 +52,7 @@
 					<el-input v-model="editForm.name" auto-complete="off"></el-input>
 				</el-form-item>
 				<el-form-item label="图片地址" prop="img_addr">
-					<el-input placeholder="输入图片地址" v-model="editForm.imgAddress"></el-input>
+					<el-input placeholder="输入图片地址" v-model="editForm.banner"></el-input>
 				</el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
@@ -111,7 +111,7 @@
                 //编辑界面数据
                 editForm: {
                     name: '',
-                    imgAddress: ''
+                    banner: ''
                 },
 
                 addFormVisible: false,//新增界面是否显示
@@ -174,7 +174,9 @@
             //显示编辑界面
             handleEdit: function (index, row) {
                 this.editFormVisible = true;
+                console.log(row);
                 this.editForm = Object.assign({}, row);
+                console.log(this.editForm);
             },
             //显示新增界面
             handleAdd: function () {
