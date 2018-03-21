@@ -48,24 +48,12 @@
 		<!--编辑界面-->
 		<el-dialog title="编辑" v-model="editFormVisible" :close-on-click-modal="false">
 			<el-form :model="editForm" label-width="80px" :rules="editFormRules" ref="editForm">
-				<el-form-item label="姓名" prop="name">
+				<el-form-item label="名称" prop="name">
 					<el-input v-model="editForm.name" auto-complete="off"></el-input>
 				</el-form-item>
-				<el-form-item label="性别">
-					<el-radio-group v-model="editForm.gender">
-						<el-radio class="radio" label="男">男</el-radio>
-						<el-radio class="radio" label="女">女</el-radio>
-					</el-radio-group>
+				<el-form-item label="图片地址" prop="img_addr">
+					<el-input placeholder="输入图片地址" v-model="editForm.imgAddress"></el-input>
 				</el-form-item>
-				<el-form-item label="年龄">
-					<el-input-number v-model="editForm.age" :min="0" :max="200"></el-input-number>
-				</el-form-item>
-				<el-form-item label="身份证号" prop="card_id">
-					<el-input  placeholder="输入身份证号" v-model="editForm.card_id"></el-input>
-				</el-form-item>
-				<!-- <el-form-item label="地址">
-					<el-input type="textarea" v-model="editForm.addr"></el-input>
-				</el-form-item> -->
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button @click.native="editFormVisible = false">取消</el-button>
@@ -122,11 +110,8 @@
                 },
                 //编辑界面数据
                 editForm: {
-                    id: 0,
                     name: '',
-                    gender: '',
-                    age: 0,
-                    card_id: ''
+                    imgAddress: ''
                 },
 
                 addFormVisible: false,//新增界面是否显示
