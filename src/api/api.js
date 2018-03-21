@@ -72,3 +72,26 @@ export const addDepartment = params => {
 export const editDepartment = params => {
     return axios.post(`${base}/editDepartment`, params)
 };
+
+
+
+
+// 查询病症
+export const getIllnessListPage = (name, page) => {
+    return axios.get(`${base}/getIllness`, { params:{name: name, page: page }});
+};
+// 删除病症
+export const deleteIllness = params => {
+    return axios.get(`${base}/deleteIllness`, { params: params });
+};
+// 新增病症
+export const addIllness = params => {
+    return axios.post(`${base}/addIllness`, {
+        name: params.name,
+        banner: params.banner
+    })
+};
+// 编辑病症
+export const editIllness = params => {
+    return axios.post(`${base}/editIllness`, params)
+};
