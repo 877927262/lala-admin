@@ -52,3 +52,8 @@ export const addDoctor = params => {
 export const editDoctor = params => {
     return axios.post(`${base}/editDoctor`, params)
 };
+
+// 查询科室
+export const getDepartmentListPage = (name, page) => {
+    return axios.get(`${base}/getDepartment`, { params:{name: name, page: page }});
+};

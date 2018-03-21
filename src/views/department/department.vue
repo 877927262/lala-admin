@@ -7,7 +7,7 @@
 					<el-input v-model="filters.name" placeholder="姓名"></el-input>
 				</el-form-item>
 				<el-form-item>
-					<el-button type="primary" v-on:click="getUsers">查询</el-button>
+					<el-button type="primary" v-on:click="getDepartment">查询</el-button>
 				</el-form-item>
 				<el-form-item>
 					<el-button type="primary" @click="handleAdd">新增</el-button>
@@ -25,7 +25,7 @@
 			</el-table-column>
 			<el-table-column label="图片" width="400"  sortable>
 				<template slot-scope="scope">
-					<img :src="scope.row.banner" alt="haha" style="width: 200px;height:100px;">
+					<img :src="scope.row.banner" alt="haha" style="height:100px;">
 				</template>
 			</el-table-column>
 			<el-table-column min-width="180" >
@@ -84,7 +84,7 @@
     import axios from 'axios';
 
     // import NProgress from 'nprogress'
-    import { getUserListPage, deleteUser, editUser, addUser } from '../../api/api';
+    import { getDepartmentListPage, deleteUser, editUser, addUser } from '../../api/api';
 
     export default {
         data() {
@@ -135,15 +135,15 @@
         methods: {
             handleCurrentChange(val) {
                 this.page = val;
-                this.getUsers();
+                this.getDepartment();
             },
             //获取用户列表
-            getUsers() {
+            getDepartment() {
                 let page = this.page;
                 let name = this.filters.name
                 this.listLoading = true;
                 // NProgress.start();
-                getUserListPage(name, page).then((res) => {
+                getDepartmentListPage(name, page).then((res) => {
                     this.total = res.data.total;
                     this.users = res.data.data;
                     this.listLoading = false;
@@ -165,7 +165,7 @@
                             message: '删除成功',
                             type: 'success'
                         });
-                        this.getUsers();
+                        this.getDepartment();
                     });
                 }).catch(() => {
 
@@ -203,7 +203,7 @@
                                 });
                                 this.$refs['editForm'].resetFields();
                                 this.editFormVisible = false;
-                                this.getUsers();
+                                this.getDepartment();
                             });
                         });
                     }
@@ -226,7 +226,7 @@
                                 });
                                 this.$refs['addForm'].resetFields();
                                 this.addFormVisible = false;
-                                this.getUsers();
+                                this.getDepartment();
                             });
                         });
                     }
@@ -237,7 +237,7 @@
             }
         },
         mounted() {
-            this.getUsers();
+            this.getDepartment();
         }
     }
 
