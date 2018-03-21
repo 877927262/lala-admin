@@ -57,3 +57,7 @@ export const editDoctor = params => {
 export const getDepartmentListPage = (name, page) => {
     return axios.get(`${base}/getDepartment`, { params:{name: name, page: page }});
 };
+// 删除科室
+export const deleteDepartment = params => {
+    return axios.get(`${base}/deleteDepartment`, { params: params });
+};
