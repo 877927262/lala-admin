@@ -95,3 +95,26 @@ export const addIllness = params => {
 export const editIllness = params => {
     return axios.post(`${base}/editIllness`, params)
 };
+
+
+// 查询预约
+export const getAppointmentListPage = (name, page) => {
+    return axios.get(`${base}/getAppointment`, { params:{name: name, page: page }});
+   };
+// 删除预约
+export const deleteAppointment = params => {
+    return axios.get(`${base}/deleteAppointment`, { params: params });
+};
+  // 编辑预约
+//   export const editAppointment = params => {
+//     return axios.post(`${base}/editAppointment`, params)
+//   };
+//   // 新增预约
+//   export const addAppointment = params => {
+//     return axios.post(`${base}/addAppointment`, {
+//       name: params.name,
+//       card_id: params.card_id,
+//       age: params.age,
+//       gender: params.gender
+//     })
+//   };
