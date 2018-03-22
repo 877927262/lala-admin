@@ -9,9 +9,6 @@
 				<el-form-item>
 					<el-button type="primary" v-on:click="getAppointment">查询</el-button>
 				</el-form-item>
-				<el-form-item>
-					<el-button type="primary" @click="handleAdd">新增</el-button>
-				</el-form-item>
 			</el-form>
 		</el-col>
 
@@ -27,11 +24,11 @@
 			</el-table-column>
 			<el-table-column prop="time" label="时间段" width="150" sortable>
 			</el-table-column>
-			<el-table-column min-width="180" >
+			<el-table-column min-width="120" >
 			</el-table-column>
 			<el-table-column label="操作" width="150">
 				<template slot-scope="scope">
-					<el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+					<!-- <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button> -->
 					<el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除</el-button>
 				</template>
 			</el-table-column>
@@ -46,50 +43,43 @@
 		<!--编辑界面-->
 		<el-dialog title="编辑" v-model="editFormVisible" :close-on-click-modal="false">
 			<el-form :model="editForm" label-width="80px" :rules="editFormRules" ref="editForm">
-				<el-form-item label="姓名" prop="name">
-					<el-input v-model="editForm.name" auto-complete="off"></el-input>
+				<el-form-item label="患者" prop="user">
+					<el-input v-model="editForm.name" auto-complete="off" style="width:195px;" disabled></el-input>
 				</el-form-item>
-				<el-form-item label="性别">
-					<el-radio-group v-model="editForm.gender">
-						<el-radio class="radio" label="男">男</el-radio>
-						<el-radio class="radio" label="女">女</el-radio>
-					</el-radio-group>
-				</el-form-item>
-				<el-form-item label="年龄">
-					<el-input-number v-model="editForm.age" :min="0" :max="200"></el-input-number>
-				</el-form-item>
-				<el-form-item label="身份证号" prop="card_id">
-					<el-input  placeholder="输入身份证号" v-model="editForm.card_id"></el-input>
-				</el-form-item>
+				<el-form-item label="大夫">
+                    <el-select v-model="editForm.doctorValue" placeholder="请选择大夫">
+                        <el-option
+                                v-for="item in editForm.doctorList"
+                                :key="item.id"
+                                :label="item.name"
+                                :value="item.id">
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+				<el-form-item label="日期">
+                    <el-select v-model="editForm.dateValue" placeholder="请选择日期">
+                        <el-option
+                                v-for="item in editForm.dateList"
+                                :key="item.id"
+                                :label="item.name"
+                                :value="item.id">
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+				<el-form-item label="时间段">
+                    <el-select v-model="editForm.timeValue" placeholder="请选择时间段">
+                        <el-option
+                                v-for="item in editForm.timeList"
+                                :key="item.id"
+                                :label="item.name"
+                                :value="item.id">
+                        </el-option>
+                    </el-select>
+                </el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button @click.native="editFormVisible = false">取消</el-button>
 				<el-button type="primary" @click.native="editSubmit" :loading="editLoading">提交</el-button>
-			</div>
-		</el-dialog>
-
-		<!--新增界面-->
-		<el-dialog title="新增" v-model="addFormVisible" :close-on-click-modal="false">
-			<el-form :model="addForm" label-width="80px" :rules="addFormRules" ref="addForm">
-				<el-form-item label="姓名" prop="name">
-					<el-input v-model="addForm.name" auto-complete="off"></el-input>
-				</el-form-item>
-				<el-form-item label="性别">
-					<el-radio-group v-model="addForm.gender" prop="gender">
-						<el-radio class="radio" label="男">男</el-radio>
-						<el-radio class="radio" label="女">女</el-radio>
-					</el-radio-group>
-				</el-form-item>
-				<el-form-item label="年龄" prop="age">
-					<el-input-number v-model="addForm.age" :min="0" :max="200"></el-input-number>
-				</el-form-item>
-				<el-form-item label="身份证号" prop="card_id">
-					<el-input  placeholder="输入身份证号" v-model="addForm.card_id"></el-input>
-				</el-form-item>
-			</el-form>
-			<div slot="footer" class="dialog-footer">
-				<el-button @click.native="addFormVisible = false">取消</el-button>
-				<el-button type="primary" @click.native="addSubmit" :loading="addLoading">提交</el-button>
 			</div>
 		</el-dialog>
 	</section>
@@ -127,31 +117,14 @@
 				},
 				//编辑界面数据
 				editForm: {
-					id: 0,
-					name: '',
-					gender: '',
-					age: 0,
-					card_id: ''
-				},
-
-				addFormVisible: false,//新增界面是否显示
-				addLoading: false,
-				addFormRules: {
-					name: [
-						{ required: true, message: '请输入姓名', trigger: 'blur' }
-					],
-					card_id: [
-						{ required: true, message: '请输入身份证号', trigger: 'blur' }
-					]
-				},
-				//新增界面数据
-				addForm: {
-					name: '',
-					gender: '',
-					age: 0,
-					card_id: ''
+					id:'',
+					doctorList: [],
+					doctorValue:'',
+					dateList: [],
+					dateValue:'',
+					timeList: [],
+					timeValue:''
 				}
-
 			}
 		},
 		methods: {
@@ -198,16 +171,6 @@
 				this.editFormVisible = true;
 				this.editForm = Object.assign({}, row);
 			},
-			//显示新增界面
-			handleAdd: function () {
-				this.addFormVisible = true;
-				this.addForm = {
-					name: '',
-					gender: '男',
-					age: 0,
-					card_id: ''
-				};
-			},
 			//编辑
 			editSubmit: function () {
 				this.$refs.editForm.validate((valid) => {
@@ -231,35 +194,14 @@
 					}
 				});
 			},
-			//新增
-			addSubmit: function () {
-				this.$refs.addForm.validate((valid) => {
-					if (valid) {
-						this.$confirm('确认提交吗？', '提示', {}).then(() => {
-							this.addLoading = true;
-							//NProgress.start();
-							let para = Object.assign({}, this.addForm);
-							addUser(para).then((res) => {
-								this.addLoading = false;
-								//NProgress.done();
-								this.$message({
-									message: '提交成功',
-									type: 'success'
-								});
-								this.$refs['addForm'].resetFields();
-								this.addFormVisible = false;
-								this.getAppointment();
-							});
-						});
-					}
-				});
-			},
 			selsChange: function (sels) {
 				this.sels = sels;
 			}
 		},
 		mounted() {
+			let _this =this;
 			this.getAppointment();
+
 		}
 	}
 
