@@ -6,6 +6,8 @@ import Doctor from './views/doctor/doctor.vue'
 import Illness from './views/illness/illness.vue'
 import Appointment from './views/appointment/appointment.vue'
 import Department from './views/department/department.vue'
+import Setting from './views/setting/setting.vue'
+
 
 let routes = [
     {
@@ -20,17 +22,13 @@ let routes = [
         name: '',
         hidden: true
     },
-    //{ path: '/main', component: Main },
     {
         path: '/',
         component: Home,
         name: '患者',
         iconCls: 'fa el-icon-message',//图标样式class
         children: [
-            // { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/user', component: User, name: '患者信息' },
-            // { path: '/form', component: Form, name: 'Form' },
-            // { path: '/user', component: user, name: '列表' },
         ]
     },
     {
@@ -68,6 +66,16 @@ let routes = [
         iconCls: 'fa fa-bar-chart',
         children: [
             { path: '/appointment', component: Appointment, name: '挂号记录' }
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '设置',
+        iconCls: 'fa fa-bar-chart',
+        hidden: true,
+        children: [
+            { path: '/setting', component: Setting, name: '个人中心' }
         ]
     },
     {
