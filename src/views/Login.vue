@@ -59,7 +59,8 @@
                   type: 'error'
                 });
               } else {
-                let user = data.name;
+                let user = data;
+                // console.log(user);
                 sessionStorage.setItem('user', JSON.stringify(user));
                 this.$router.push({ path: '/user' });
               }
