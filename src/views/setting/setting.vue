@@ -30,23 +30,22 @@
             <el-col :span="24">
                 <div class="changePassword">
                     <h1>修改密码</h1>
-                    <el-form  label-width="100px" :model="passwordData" class="form">
-                        <el-form-item label="旧密码:">
+                    <el-form  label-width="100px" :model="passwordData" class="form" :rules="rules2" ref="passwordData">
+                        <el-form-item label="旧密码:" prop="olderPassword">
                             <el-input v-model="passwordData.olderPassword" type="password">
                             </el-input>
                         </el-form-item>
-                        <el-form-item label="新密码:">
+                        <el-form-item label="新密码:" prop="newPassword">
                             <el-input v-model="passwordData.newPassword" type="password">
                             </el-input>
                         </el-form-item>
-                        <el-form-item label="确认密码:">
+                        <el-form-item label="确认密码:" prop="againNewPassword">
                             <el-input v-model="passwordData.againNewPassword" type="password">
                             </el-input>
                         </el-form-item>
                         <el-form-item >
-                            <el-button type="primary" @click="changePassword">确认修改</el-button>
+                            <el-button type="primary" @click="changePassword('passwordData')">确认修改</el-button>
                         </el-form-item>
-
                     </el-form>
                 </div>
             </el-col>
@@ -57,6 +56,27 @@
 <script>
     export default {
         data(){
+			// 自定义表单验证规则，解决两次密码输入不一致问题
+			var validatePass = (rule, value, callback) => {
+				if (value === '') {
+				callback(new Error('请输入密码'));
+				} else {
+				if (this.passwordData.againNewPassword !== '') {
+					this.$refs.passwordData.validateField('againNewPassword');
+				}
+				callback();
+				}
+			};
+			var validatePass2 = (rule, value, callback) => {
+				if (value === '') {
+				callback(new Error('请再次输入密码'));
+				} else if (value !== this.passwordData.newPassword) {
+				callback(new Error('两次输入密码不一致!'));
+				} else {
+				callback();
+				}
+			};
+
             return {
                 //修改个人信息
                 userInfo:{
@@ -68,7 +88,15 @@
                     olderPassword:'',
                     newPassword:'',
                     againNewPassword:''
-                }
+				},
+				rules2: {
+					newPassword: [
+						{ validator: validatePass, trigger: 'blur' }
+					],
+					againNewPassword: [
+						{ validator: validatePass2, trigger: 'blur' }
+					]
+				}
             }
         },
         computed:{
@@ -84,14 +112,19 @@
                 
             },
             //修改密码
-            changePassword(){
+            changePassword(formName){
                 let _this = this;
-                
+                this.$refs[formName].validate((valid) => {
+					if (valid) {
+						// 密码的表单验证通过了，接下来传向后台
+					} else {
+						return false;
+					}
+				});
             }
         },
         mounted(){
 			let user = JSON.parse(sessionStorage.getItem('user'));
-			console.log(user);
 			this.userInfo.logo = user.avatar;
 			this.userInfo.name = user.name;
         }
