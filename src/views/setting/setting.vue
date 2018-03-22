@@ -1,8 +1,8 @@
 <template>
     <div class="p-t-lg">
-        <el-button size="small" type="primary" class="pull-right" @click="back">返回</el-button>
         <el-row class="m-t-lg">
             <el-col :span="24">
+        		<el-button size="small" type="primary" class="pull-right" @click="back">返回</el-button>
                 <div class="changeInfo">
                     <h1>修改个人信息</h1>
                     <el-form  label-width="100px"  class="form">
@@ -104,7 +104,7 @@
         methods:{
             //跳转到上一级路由
             back(){
-                this.$router.go(-1)
+				this.$router.go(-1)
             },
             //修改用户信息
             changeUserInfo(){

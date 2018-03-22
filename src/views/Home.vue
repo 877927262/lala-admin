@@ -13,7 +13,7 @@
 				<el-dropdown trigger="hover">
 					<span class="el-dropdown-link userinfo-inner"><img :src="this.sysUserAvatar" /> {{sysUserName}}</span>
 					<el-dropdown-menu slot="dropdown">
-						<el-dropdown-item>设置</el-dropdown-item>
+						<el-dropdown-item @click.native="setting">设置</el-dropdown-item>
 						<el-dropdown-item divided @click.native="logout">退出登录</el-dropdown-item>
 					</el-dropdown-menu>
 				</el-dropdown>
@@ -93,6 +93,10 @@
 			}
 		},
 		methods: {
+			// 路由跳转到设置页面
+			setting(){
+				this.$router.push('/setting')
+			},
 			onSubmit() {
 				console.log('submit!');
 			},
