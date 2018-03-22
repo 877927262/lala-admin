@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 let base = 'http://127.0.0.1:3000/appointment';
-
+// 登录
 export const requestLogin = params => {
-  return axios.post(`/login`, params).then(res => res.data);
+  return axios.post(`${base}/login`, params).then(res => res.data);
 };
 // 查询用户
 export const getUserListPage = (name, page) => {

@@ -52,15 +52,14 @@
             //NProgress.start();
             var loginParams = { username: this.ruleForm2.account, password: this.ruleForm2.checkPass };
             requestLogin(loginParams).then(data => {
-              this.logining = false;
-              //NProgress.done();
-              let { msg, code, user } = data;
-              if (code !== 200) {
+              this.logining = false;  
+              if (!data) {
                 this.$message({
-                  message: msg,
+                  message: '请输入正确的账户和密码',
                   type: 'error'
                 });
               } else {
+                let user = data.name;
                 sessionStorage.setItem('user', JSON.stringify(user));
                 this.$router.push({ path: '/user' });
               }
