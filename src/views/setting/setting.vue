@@ -98,11 +98,14 @@
 					]
 				},
 				rules2: {
+                    olderPassword:[
+						{ required: true,message: '请输入旧密码', trigger: 'blur' }
+					],
 					newPassword: [
-						{ validator: validatePass, trigger: 'blur' }
+						{ required: true,validator: validatePass, trigger: 'blur' }
 					],
 					againNewPassword: [
-						{ validator: validatePass2, trigger: 'blur' }
+						{ required: true,validator: validatePass2, trigger: 'blur' }
 					]
 				}
             }
@@ -131,6 +134,7 @@
                 this.$refs[formName].validate((valid) => {
 					if (valid) {
 						// 密码的表单验证通过了，接下来传向后台
+                        alert('通过')
 					} else {
 						return false;
 					}
