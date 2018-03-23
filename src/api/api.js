@@ -105,7 +105,11 @@ export const getAppointmentListPage = (name, page) => {
 export const deleteAppointment = params => {
     return axios.get(`${base}/deleteAppointment`, { params: params });
 };
-// 管理员信息
+// 修改管理员信息
 export const editAdminInfo = params => {
 return axios.post(`${base}/editAdminInfo`, params)
 };
+// 修改管理员密码
+export const editAdminPassword = params => {
+    return axios.post(`${base}/editAdminPassword`, params)
+    };

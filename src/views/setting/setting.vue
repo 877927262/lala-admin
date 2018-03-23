@@ -54,7 +54,7 @@
 </template>
 
 <script>
-	import { editAdminInfo } from '../../api/api';
+	import { editAdminInfo, editAdminPassword } from '../../api/api';
 
     export default {
         data(){
@@ -88,6 +88,7 @@
                 },
                 // 修改密码 表单数据
                 passwordData:{
+                    id: '',
                     olderPassword:'',
                     newPassword:'',
                     againNewPassword:''
@@ -148,7 +149,24 @@
                 this.$refs[formName].validate((valid) => {
 					if (valid) {
 						// 密码的表单验证通过了，接下来传向后台
-                        alert('通过')
+                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
+							let para = Object.assign({}, this.passwordData);
+							editAdminPassword(para).then((res) => {
+                                if(res.data.affectedRows){
+                                    this.$message({
+                                        message: '修改成功',
+                                        type: 'success'
+                                    });
+                                    sessionStorage.removeItem('user');
+                                    _this.$router.push('/login');
+                                }else{
+                                    this.$message({
+                                        message: '旧密码输入错误',
+                                        type: 'error'
+                                    });
+                                }
+							});
+						});
 					} else {
 						return false;
 					}
@@ -160,6 +178,7 @@
 			this.userInfo.logo = user.avatar;
             this.userInfo.name = user.name;
             this.userInfo.id = user.id;
+            this.passwordData.id = user.id;
         }
 
     }
