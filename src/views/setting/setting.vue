@@ -5,22 +5,22 @@
         		<el-button size="small" type="primary" class="pull-right" @click="back">返回</el-button>
                 <div class="changeInfo">
                     <h1>修改个人信息</h1>
-                    <el-form  label-width="100px"  class="form">
+                    <el-form  label-width="100px"  class="form" :model="userInfo" :rules="rules1" ref="userInfo">
                         <el-form-item>
                             <div class="logo-box">
                                 <img :src="userInfo.logo" class="avatar">
                             </div>
                         </el-form-item>
-                        <el-form-item label="头像地址:">
+                        <el-form-item label="头像地址:" prop="logo">
                             <el-input v-model="userInfo.logo">
                             </el-input>
                         </el-form-item>
-                        <el-form-item label="修改昵称:">
+                        <el-form-item label="修改昵称:" prop="name">
                             <el-input v-model="userInfo.name">
                             </el-input>
                         </el-form-item>
                         <el-form-item >
-                            <el-button type="primary" @click="changeUserInfo">确认修改</el-button>
+                            <el-button type="primary" @click="changeUserInfo('userInfo')">确认修改</el-button>
                         </el-form-item>
                     </el-form>
                 </div>
@@ -89,6 +89,14 @@
                     newPassword:'',
                     againNewPassword:''
 				},
+                rules1: {
+					logo: [
+						{ required: true, message: '请输入图片路径', trigger: 'blur' }
+					],
+					name: [
+						{ required: true, message: '请输入昵称', trigger: 'blur' }
+					]
+				},
 				rules2: {
 					newPassword: [
 						{ validator: validatePass, trigger: 'blur' }
@@ -107,9 +115,15 @@
 				this.$router.go(-1)
             },
             //修改用户信息
-            changeUserInfo(){
-                let _this = this ;
-                
+            changeUserInfo(formName){
+                let _this = this;
+                this.$refs[formName].validate((valid) => {
+					if (valid) {
+						// 用户的表单验证通过了，接下来传向后台
+					} else {
+						return false;
+					}
+				});
             },
             //修改密码
             changePassword(formName){
