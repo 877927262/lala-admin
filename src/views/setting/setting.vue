@@ -54,6 +54,8 @@
 </template>
 
 <script>
+	import { editAdminInfo } from '../../api/api';
+
     export default {
         data(){
 			// 自定义表单验证规则，解决两次密码输入不一致问题
@@ -80,6 +82,7 @@
             return {
                 //修改个人信息
                 userInfo:{
+                    id:'',
                     logo:'',
                     name:''
                 },
@@ -122,7 +125,18 @@
                 let _this = this;
                 this.$refs[formName].validate((valid) => {
 					if (valid) {
-						// 用户的表单验证通过了，接下来传向后台
+                        // 用户的表单验证通过了，接下来传向后台
+                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
+							let para = Object.assign({}, this.userInfo);
+							editAdminInfo(para).then((res) => {
+								this.$message({
+									message: '修改成功',
+									type: 'success'
+                                });
+                                sessionStorage.removeItem('user');
+                                _this.$router.push('/login');
+							});
+						});
 					} else {
 						return false;
 					}
@@ -142,9 +156,10 @@
             }
         },
         mounted(){
-			let user = JSON.parse(sessionStorage.getItem('user'));
+            let user = JSON.parse(sessionStorage.getItem('user'));
 			this.userInfo.logo = user.avatar;
-			this.userInfo.name = user.name;
+            this.userInfo.name = user.name;
+            this.userInfo.id = user.id;
         }
 
     }

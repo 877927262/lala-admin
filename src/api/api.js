@@ -105,16 +105,7 @@ export const getAppointmentListPage = (name, page) => {
 export const deleteAppointment = params => {
     return axios.get(`${base}/deleteAppointment`, { params: params });
 };
-  // 编辑预约
-//   export const editAppointment = params => {
-//     return axios.post(`${base}/editAppointment`, params)
-//   };
-//   // 新增预约
-//   export const addAppointment = params => {
-//     return axios.post(`${base}/addAppointment`, {
-//       name: params.name,
-//       card_id: params.card_id,
-//       age: params.age,
-//       gender: params.gender
-//     })
-//   };
+// 管理员信息
+export const editAdminInfo = params => {
+return axios.post(`${base}/editAdminInfo`, params)
+};
