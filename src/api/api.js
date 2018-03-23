@@ -107,9 +107,13 @@ export const deleteAppointment = params => {
 };
 // 修改管理员信息
 export const editAdminInfo = params => {
-return axios.post(`${base}/editAdminInfo`, params)
+    return axios.post(`${base}/editAdminInfo`, params)
 };
 // 修改管理员密码
 export const editAdminPassword = params => {
     return axios.post(`${base}/editAdminPassword`, params)
-    };
+};
+// 修改诊断结果
+export const editIllnessResult = params => {
+    return axios.post(`${base}/editIllnessResult`, params)
+};
